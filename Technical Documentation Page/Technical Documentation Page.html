@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>FLEXBOX</header>
+            <ul>
+                <li><a class="nav-link" href="#Why_Flexbox?">Why Flexbox?</a></li>
+                <li><a class="nav-link" href="#Select_the_Flex">Select the Flex</a></li>
+                <li><a class="nav-link" href="#Flex_Direction">Flex Direction</a></li>
+                <li><a class="nav-link" href="#Flex_Wrap">Flex Wrap</a></li>
+                <li><a class="nav-link" href="#Align_and_Justify">Align and Justify</a></li>
+                <li><a class="nav-link" href="#Reference">Reference</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Why_Flexbox?">
+                <header>Why Flexbox?</header>
+                <article>
+                    <p>
+                        Flexbox is one dimensional layout method used to arrange items in rows or columns.
+                        The item will expand (thus flex) to adapt into containers.
+                    </p>
+                    <p>
+                        Flexbox shines where other CSS features as <code class="text">float</code> and 
+                        <code class="text">position</code> fail, like vertically
+                        centering a block of content inside its parent. 
+                        This layout method will make your
+                        life easier, and with a lot less code.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Select_the_Flex">
+                <header>Select the Flex</header>
+                <article>
+                    <p>
+                        First thing we need to select the element that will become a flexible box.
+                        We will be using the value <code class="text">display</code> on the parent of the element 
+                        we are going to style.
+                    </p>
+                    <p>For example:</p>
+                    <pre><code>
+                            section {
+                                display: flex;
+                            }
+
+                        </code></pre>
+                    <p>
+                        The &lt;section&gt; element is now a <strong>flex container</strong>
+                        and its children <strong>flex items</strong>.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Flex_Direction">
+                <header>Flex Direction</header>
+                <article>
+                    <p>
+                        Flex items are laid out along two axis:
+                        <ul>
+                            <li>
+                                the <strong>main axis</strong> is the axis in which
+                                the flex-items are laid out in (in rows or columns).
+                                This axis starts at <strong>main start</strong> and ends
+                                at <strong>main end</strong>.
+                            </li>
+                            <li>
+                                the <strong>cross axis</strong> is the axis perpendicular
+                                to the <strong>main axis</strong>. It starts at <strong>
+                                    cross start</strong> and ends at <strong>cross end</strong>.
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        Using the property <code class="text">flex-direction</code> you can specify the 
+                        direction of the main axis (default is row).
+                    </p>
+                        <pre><code>
+                                flex-direction: column;
+                                flex-direction: row;
+
+                            </code></pre>
+                    
+                </article>
+            </section>
+            <section class="main-section" id="Flex_Wrap">
+                <header>Flex Wrap</header>
+                <article>
+                    <p>
+                        Having a fixed width or height in your layout can sometimes cause your
+                        flexbox children to overflow the container.
+                    </p>
+                    <p>
+                        To fix this you can add a <code class="text">wrap</code> declaration to your
+                        parent element, like this:
+                    </p>
+                    <pre><code>
+                            section {
+                                display: flex;
+                                flex-wrap: wrap;
+                            }
+
+                        </code></pre>
+                    <p>
+                        With this declaration, any overflow will be moved down to the 
+                        next line. Easy Peasy!
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Align_and_Justify">
+                <header>Align and Justify</header>
+                <p>
+                    To align items along the two axis we use <code class="text">align-items</code>
+                    and <code class="text">justify-content</code>.
+                </p>
+                <p>
+                    <code class="text">align-items</code> controls the positioning of the flex
+                    items on the cross axis.
+                </p>
+                <ul>
+                    <li>
+                        The default value is <code class="text">stretch</code>, which stretches
+                        the items inside the parent along the cross axis.
+                    </li>
+                    <li>
+                        To just center the item mantaining its intrinsic dimension,
+                        we can use the value <code class="text">center</code>.
+                    </li>
+                    <li>
+                        Other values like <code class="text">flex-start</code> or <code class="text">flex-end</code>,
+                        will align the items at the start or the end of the cross axis.
+                    </li>
+                </ul>
+                <p>
+                    <code class="text">justify-content</code> controls the positioning of the flex
+                    items on the main axis.
+                </p>
+                <ul>
+                    <li>
+                        The default value is <code class="text">flex-start</code>, which positions
+                        the items at the start of the main axis. Using <code class="text">flex-end</code>
+                        will position them at the end of the axis.
+                    </li>
+                    <li>
+                        To center the flex items, again, we can use the value <code class="text">center</code>.
+                    </li>
+                    <li>
+                        To distribute the items evenly along the main axis, we can use the value
+                        <code class="text">space-around</code>. This will leave a bit of space at either end.
+                    </li>
+                    <li>
+                        The value <code class="text">space-between</code> is very similar to the previous one
+                        <code class="text">space-around</code>, but it doesn't leave any space at either end.
+                    </li>
+                </ul>
+            </section>
+            <section class="main-section" id="reference">
+                <header>Reference</header>
+                <p>
+                    All the documentation in this page is taken from
+                    <a 
+                    href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox?retiredLocale=it">
+                    MDN
+                    </a>
+                </p>
+            </section>
+            
+        </main>
+    </body>
+</html>
