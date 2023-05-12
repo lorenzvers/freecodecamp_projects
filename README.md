@@ -18,4 +18,4 @@ link: [Technical Documentation Page] (https://lorenzvers.github.io/freecodecamp_
 
 ## My Portfolio
 "Fake portfolio made as final project of the freecodecamp responsive web design certification"<br>
-link [My Portfolio] ()
+link [My Portfolio] (https://lorenzvers.github.io/freecodecamp_projects/MyPortfolio/MyPortfolio-new.html#projects)
